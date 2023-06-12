@@ -1,10 +1,6 @@
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 
-// Crear instancia de LookAndFeel customizada
-//CustomLookAndFeel customLookAndFeelSelector(true);
-//CustomLookAndFeel customLookAndFeelKnobs(false);
-
 Kobol_VCOAudioProcessorEditor::Kobol_VCOAudioProcessorEditor(Kobol_VCOAudioProcessor& p) : AudioProcessorEditor(&p), processor(p), synthesiser(p.getSynthesiser())
 {
 	int defPoly = synthesiser.getPoly();

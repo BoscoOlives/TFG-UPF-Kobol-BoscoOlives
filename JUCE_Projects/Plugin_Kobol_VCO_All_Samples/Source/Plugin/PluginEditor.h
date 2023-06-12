@@ -16,14 +16,14 @@ public:
 		Image customKnobImage;
 		customKnobImage = ImageCache::getFromMemory(BinaryData::knob_png, BinaryData::knob_pngSize);
 
-		// Calcula el ángulo de rotación basado en la posición del slider
+		// calcula el ángulo de rotación basado en la posición del slider
 		float angle = rotaryStartAngle + sliderPos * (rotaryEndAngle - rotaryStartAngle);
 
-		// Rota la imagen del knob personalizado
+		// rota la imagen del knob personalizado, la imagen que acompaña el proyecto (knob.png)
 		g.saveState();
 		g.addTransform(AffineTransform::rotation(angle, x + width * 0.5f, y + height * 0.5f));
 		g.drawImage(customKnobImage, x, y, width, height, 0, 0, customKnobImage.getWidth(), customKnobImage.getHeight());
-		// Para los knobs pequeños, de momento queda desactivado
+		// Para los knobs pequeños, de momento queda desactivado ya que se prefiere la estetica del knob de JUCE
 		//g.drawImageWithin(customKnobImage, x, y, width, height, RectanglePlacement::doNotResize);
 		g.restoreState();
 	}
