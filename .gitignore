@@ -1,0 +1,41 @@
+
+# ----------BOSCO EXCLUDES---------------
+
+# Folders excluded
+json_files/
+rsf_kobol_expander_2-vco/
+.ipynb_checkpoints/
+cut_originals/
+cut_synthesized/
+json_synthesis/
+Midi_test/
+Reaper_recs/
+__pycache__
+
+JUCE_Projects/Plugin_Kobol_VCO_All_Samples/[Bb]uilds/
+JUCE_Projects/Plugin_Kobol_VCO_All_Samples/[Jj]uce[Ll]ibrary[Cc]ode/
+JUCE_Projects/Plugin_Kobol_VCO_All_Samples/lib/
+#JUCE_Projects/Plugin_Kobol_VCO_All_Samples/data/
+JUCE_Projects/Plugin_Kobol_VCO_All_Samples/Kobol_VCO/
+
+JUCE_Projects/Plugin_Kobol_VCO_One_Sample/
+#JUCE_Projects/Plugin_Kobol_VCO_One_Sample/[Bb]uilds/
+#JUCE_Projects/Plugin_Kobol_VCO_One_Sample/[Jj]uce[Ll]ibrary[Cc]ode/
+#JUCE_Projects/Plugin_Kobol_VCO_One_Sample/data/
+
+
+#Python files
+test_harmonicmodel_streaming.py
+test_hprmodel_streaming.py
+
+#notebook files
+Tests_Kobol_Streaming_Mode.ipynb
+
+# JSON
+*.json
+
+# Audios Excluded
+*.wav
+
+# CSV creado por  el TFG_Kobol_Standard_Mode.ipynb
+datos.csv
