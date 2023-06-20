@@ -10,7 +10,7 @@ Kobol_VCOSynthesiserSample::Kobol_VCOSynthesiserSample(AudioFormatReader& file, 
 		file.read(data, 0, (int)file.lengthInSamples + 4, 0, true, true);
 		this->name_file = name_file;
 		//find_freq_from_voltage(); //init f0 variable
-		//find_nearest_frequency(); //init fSemitone variable
+		//findNearestFrequency(); //init fSemitone variable
 	}
 }
 
@@ -46,7 +46,7 @@ int Kobol_VCOSynthesiserSample::getLength()
 void Kobol_VCOSynthesiserSample::setF0(int f0)
 {
 	this->f0 = f0;
-	find_nearest_frequency(); //init fSemitone variable
+	findNearestFrequency(); //init fSemitone variable
 }
 
 //void Kobol_VCOSynthesiserSample::find_freq_from_voltage()
@@ -63,7 +63,7 @@ void Kobol_VCOSynthesiserSample::setF0(int f0)
 //}
 
 
-void Kobol_VCOSynthesiserSample::find_nearest_frequency()
+void Kobol_VCOSynthesiserSample::findNearestFrequency()
 {
 	//busca la frecuencia más cercana a la frecuencia fundamental "f0" del sample de audio, en un listado de frecuencias predefinidas (semitonos)
 	float min_distance = std::abs(this->f0 - this->frequencies[0]);

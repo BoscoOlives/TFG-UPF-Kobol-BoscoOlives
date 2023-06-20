@@ -17,7 +17,7 @@ public:
 	float getFSemitone();
 	int getMidiNoteNumber();
 	//void find_freq_from_voltage();
-	void find_nearest_frequency();
+	void findNearestFrequency();
 	void setF0(int f0);
 	String name_file;
 	
